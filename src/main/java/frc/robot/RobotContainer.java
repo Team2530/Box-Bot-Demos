@@ -23,8 +23,7 @@ import edu.wpi.first.units.measure.Dimensionless;
  * subsystems, commands, and trigger mappings) should be declared here.
  */
 public class RobotContainer {
-  private final KrakenSubsystem m_krakenSubsystem = new KrakenSubsystem();
-  private final VortexSubsystem m_vortexSubsystem = new VortexSubsystem();
+  //Int subsystems here
 
   private final CommandXboxController operatorController =
       new CommandXboxController(OperatorConstants.operatorControllerPort);
@@ -48,13 +47,13 @@ public class RobotContainer {
 
     operatorController.a().onTrue(
       new InstantCommand(
-        () -> m_krakenSubsystem.setTargetVelocity(
+        () -> .setTargetVelocity(
           25
         )
       )
     ).onFalse(
       new InstantCommand(
-        () -> m_krakenSubsystem.setTargetVelocity(
+        () -> .setTargetVelocity(
           0
         )
       )
@@ -62,17 +61,19 @@ public class RobotContainer {
 
     operatorController.x().onTrue(
       new InstantCommand(
-        () -> m_vortexSubsystem.setTargetVelocity(
+        () -> .setTargetVelocity(
           25
         )
       )
     ).onFalse(
       new InstantCommand(
-        () -> m_vortexSubsystem.setTargetVelocity(
+        () -> .setTargetVelocity(
           0
         )
       )
     );
+    //rebind a action to a diffrent button or make a new action
+    //OR for a challange use the triggers for motor speed.
   }
 
 

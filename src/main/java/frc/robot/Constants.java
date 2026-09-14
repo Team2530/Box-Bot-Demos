@@ -18,8 +18,7 @@ public final class Constants {
   }
 
   public static class KrakenConstants {
-    public static final int CAN_BUS = 0;
-    public static final int CAN_ID = 5;
+    //Declare your CAN IDs here
 
     public static final double kP = 0.05;
     public static final double kI = 0;
