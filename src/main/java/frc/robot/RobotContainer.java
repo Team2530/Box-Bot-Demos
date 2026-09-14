@@ -6,7 +6,6 @@ package frc.robot;
 
 import frc.robot.Constants.OperatorConstants;
 import frc.robot.subsystems.KrakenSubsystem;
-import frc.robot.subsystems.VortexSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.InstantCommand;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
@@ -24,8 +23,7 @@ import edu.wpi.first.units.measure.Dimensionless;
  */
 public class RobotContainer {
   private final KrakenSubsystem m_krakenSubsystem = new KrakenSubsystem();
-  private final VortexSubsystem m_vortexSubsystem = new VortexSubsystem();
-
+  
   private final CommandXboxController operatorController =
       new CommandXboxController(OperatorConstants.operatorControllerPort);
 
@@ -55,20 +53,6 @@ public class RobotContainer {
     ).onFalse(
       new InstantCommand(
         () -> m_krakenSubsystem.setTargetVelocity(
-          0
-        )
-      )
-    );
-
-    operatorController.x().onTrue(
-      new InstantCommand(
-        () -> m_vortexSubsystem.setTargetVelocity(
-          25
-        )
-      )
-    ).onFalse(
-      new InstantCommand(
-        () -> m_vortexSubsystem.setTargetVelocity(
           0
         )
       )

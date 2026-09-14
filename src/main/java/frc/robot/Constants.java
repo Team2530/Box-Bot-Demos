@@ -29,17 +29,4 @@ public final class Constants {
     public static final double kV = 0.113;
     public static final double kA = 0.001;
   }
-
-  public static class VortexConstants {
-    public static final int CAN_BUS = 0;
-    public static final int CAN_ID = 6;
-
-    public static final double kP = 0.05;
-    public static final double kI = 0;
-    public static final double kD = 0;
-
-    public static final double kS = 0.2;
-    public static final double kV = 0.113;
-    public static final double kA = 0.001;
-  }
 }
